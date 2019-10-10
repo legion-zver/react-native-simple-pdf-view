@@ -1,0 +1,32 @@
+{
+  "name": "react-native-simple-pdf-view",
+  "title": "React Native Simple Pdf View",
+  "version": "0.0.1",
+  "description": "PDF view for React Native (windows uwp)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legion-zver/react-native-simple-pdf-view.git",
+    "baseUrl": "https://github.com/legion-zver/react-native-simple-pdf-view"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Alexander Garin",
+    "email": "garin1221@yandex.ru"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-native": ">=0.59.10",
+    "react-native-windows": ">=0.59.0-rc.3"
+  },
+  "devDependencies": {
+    "react": "^16.8.3",
+    "react-native": "^0.59.10",
+    "react-native-windows": "^0.59.0-rc.3"
+  }
+}
