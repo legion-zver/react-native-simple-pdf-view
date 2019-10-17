@@ -4,7 +4,7 @@ using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;
 
-namespace Simple.Pdf.View.RNSimplePdfView
+namespace RNSimplePdfView
 {
     /// <summary>
     /// Package defining core framework modules (e.g., <see cref="UIManagerModule"/>).
@@ -47,7 +47,10 @@ namespace Simple.Pdf.View.RNSimplePdfView
         public IReadOnlyList<IViewManager> CreateViewManagers(
             ReactContext reactContext)
         {
-            return new List<IViewManager>(0);
+            return new List<IViewManager>
+            {
+                new RNSimplePdfViewManager(),
+            };
         }
     }
 }

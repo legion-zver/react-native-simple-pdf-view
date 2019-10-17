@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 
-namespace Simple.Pdf.View.RNSimplePdfView
+namespace RNSimplePdfView
 {
     /// <summary>
     /// A module that allows JS to share data.
@@ -26,7 +26,7 @@ namespace Simple.Pdf.View.RNSimplePdfView
         {
             get
             {
-                return "RNSimplePdfView";
+                return "RNSimplePdfViewModule";
             }
         }
     }

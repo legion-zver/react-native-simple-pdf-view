@@ -20,12 +20,13 @@
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "react": "^16.8.3",
-    "react-native": ">=0.59.10",
-    "react-native-windows": ">=0.59.0-rc.3"
+    "react": "^16.8.6",
+    "react-native": ">=0.59.10 <0.60.x",
+    "react-native-windows": ">=0.59.0-rc.3 <0.60.x"
   },
   "devDependencies": {
     "react": "^16.8.3",
+    "prop-types": "^15.7.2",
     "react-native": "^0.59.10",
     "react-native-windows": "^0.59.0-rc.3"
   }
