@@ -6,6 +6,9 @@ import { UIManager, Platform, requireNativeComponent, findNodeHandle } from 'rea
 class SimplePdfView extends React.Component {
 
     static propTypes = {
+        onError: PropTypes.func,
+        onEndLoading: PropTypes.func,
+        onStartLoading: PropTypes.func,
         backgroundColor: PropTypes.any,
         source: PropTypes.string.isRequired,
         style: PropTypes.any,
@@ -74,6 +77,12 @@ class SimplePdfView extends React.Component {
     }
 }
 
-const RNSimplePdfView = requireNativeComponent('RNSimplePdfView', SimplePdfView);
+const RNSimplePdfView = requireNativeComponent('RNSimplePdfView', SimplePdfView, {
+    nativeOnly: {
+        onError: true,
+        onEndLoading: true,
+        onStartLoading: true,
+    }
+});
 
 export default SimplePdfView;

@@ -28,6 +28,43 @@ namespace RNSimplePdfView
             }
         }
 
+        public override JObject CustomDirectEventTypeConstants
+        {
+            get
+            {
+                return new JObject
+                {
+                    {
+                        AGSimplePdfView.GetJavaScriptEventName(AGSimplePdfView.AGSimplePdfViewEventType.StartLoading),
+                        new JObject
+                        {
+                            { "registrationName", "onStartLoading" },
+                        }
+                    },
+                    {
+                        AGSimplePdfView.GetJavaScriptEventName(AGSimplePdfView.AGSimplePdfViewEventType.EndLoading),
+                        new JObject
+                        {
+                            { "registrationName", "onEndLoading" },
+                        }
+                    },
+                    {
+                        AGSimplePdfView.GetJavaScriptEventName(AGSimplePdfView.AGSimplePdfViewEventType.Error),
+                        new JObject
+                        {
+                            { "registrationName", "onError" },
+                        }
+                    }
+                };
+            }
+        }
+
+        public override void OnDropViewInstance(ThemedReactContext reactContext, AGSimplePdfView view)
+        {
+            base.OnDropViewInstance(reactContext, view);
+            view.Destroy();
+        }
+
         protected override AGSimplePdfView CreateViewInstance(ThemedReactContext reactContext)
         {
             return new AGSimplePdfView();
@@ -42,9 +79,9 @@ namespace RNSimplePdfView
         }
 
         [ReactProp("source")]
-        public void SetZoomScale(AGSimplePdfView view, string source)
+        public void SetSource(AGSimplePdfView view, string source)
         {
-            view.Load(source);
+            view.Load(source.Trim());
         }
 
     }
