@@ -109,7 +109,9 @@ namespace RNSimplePdfView
             emitStartLoadingEvent(source, false, index);
             try
             {
-                StorageFile file = await StorageFile.GetFileFromPathAsync(source);
+                StorageFile file = source.StartsWith("ms-") && source.Contains("://") ?
+                    await StorageFile.GetFileFromApplicationUriAsync(new Uri(source)) :
+                    await StorageFile.GetFileFromPathAsync(source);
                 PdfDocument doc = await PdfDocument.LoadFromFileAsync(file);
                 setPdfDocument(doc, source, index);
             }
